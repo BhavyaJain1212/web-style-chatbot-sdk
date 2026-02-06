@@ -1,0 +1,88 @@
+:root{
+  --bg: #f6f7fb;
+  --text: #0f172a;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.brand-mark{
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.brand-name{
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-section{
+  padding: 64px 0 56px;
+}
+
+.search-card{
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.mini-card{
+  border-radius: 16px;
+}
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.site-footer{
+  background: #ffffff;
+}
+
+.footer-title{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-links li{
+  margin-bottom: 8px;
+}
+
+.footer-links a{
+  color: rgba(15, 23, 42, 0.75);
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  color: rgba(15, 23, 42, 1);
+  text-decoration: underline;
+}
+
+.footer-mini-link{
+  color: rgba(15, 23, 42, 0.65);
+  text-decoration: none;
+}
+
+.footer-mini-link:hover{
+  color: rgba(15, 23, 42, 1);
+  text-decoration: underline;
+}
+
+/* Make the input group look cleaner */
+.input-group-text{
+  border-radius: 14px 0 0 14px;
+}
+
+.input-group .form-control{
+  border-radius: 0 14px 14px 0;
+}
+
+@media (max-width: 576px){
+  .hero-section{
+    padding: 44px 0 40px;
+  }
+}
