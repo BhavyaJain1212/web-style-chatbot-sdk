@@ -1,0 +1,296 @@
+<!-- ===================== CHATBOT WRAPPER ===================== -->
+<!-- This is the main container holding both the chat window and the toggle button -->
+<div class="chatbot-wrapper">
+
+    <!-- ===================== CHAT WINDOW ===================== -->
+    <!-- This is the popup chat interface (hidden by default) -->
+    <div id="plaksha-chat-window" class="chat-window">
+
+        <!-- ===================== CHAT HEADER ===================== -->
+        <!-- Top bar showing bot name, status, and close button -->
+        <div class="chat-header">
+            <div class="header-info">
+                <span class="bot-avatar">🤖</span>
+                <div>
+                    <h3>Plaksha Assistant</h3>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+
+            <!-- Button to close the chat window -->
+            <button id="close-chat" class="close-btn">&times;</button>
+        </div>
+
+        <!-- ===================== CHAT BODY ===================== -->
+        <!-- Area where messages (bot/user) will appear -->
+        <div class="chat-body" id="chat-body">
+
+            <!-- Initial bot welcome message -->
+            <div class="message bot-message">
+                <div class="msg-content">
+                    Hello! Welcome to Plaksha University. How can I assist you with admissions or campus life today?
+                </div>
+                <div class="msg-time">Just now</div>
+            </div>
+        </div>
+
+        <!-- ===================== CHAT FOOTER ===================== -->
+        <!-- Input box and send button -->
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type your question..." autocomplete="off">
+
+            <!-- Send button with SVG icon -->
+            <button id="send-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== CHAT TOGGLE BUTTON ===================== -->
+    <!-- Floating button used to open/close the chatbot -->
+    <button id="chatbot-toggler" class="chat-toggle-btn">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
+        </svg>
+    </button>
+</div>
+
+<!-- ===================== STYLES ===================== -->
+<style>
+
+    /* ---------- CSS VARIABLES (Theme Colors) ---------- */
+    :root {
+        --plaksha-teal: #008B8B;
+        --plaksha-dark: #222222;
+        --plaksha-light: #f4f7f6;
+        --chat-width: 350px;
+    }
+
+    /* ---------- CHAT TOGGLE BUTTON ---------- */
+    .chat-toggle-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: var(--plaksha-teal);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    /* Hover animation for toggle button */
+    .chat-toggle-btn:hover {
+        transform: scale(1.1);
+        background-color: #007676;
+    }
+
+    /* ---------- CHAT WINDOW ---------- */
+    .chat-window {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        width: var(--chat-width);
+        height: 450px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        /* Hidden by default */
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+        z-index: 9999;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Visible state of chat window */
+    .chat-window.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* ---------- HEADER ---------- */
+    .chat-header {
+        background-color: var(--plaksha-teal);
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* ---------- CHAT BODY ---------- */
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        background-color: var(--plaksha-light);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Message container */
+    .message {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Message bubble */
+    .msg-content {
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    /* Bot message style */
+    .bot-message {
+        align-self: flex-start;
+    }
+
+    .bot-message .msg-content {
+        background: white;
+        border: 1px solid #e0e0e0;
+    }
+
+    /* User message style */
+    .user-message {
+        align-self: flex-end;
+    }
+
+    .user-message .msg-content {
+        background: var(--plaksha-teal);
+        color: white;
+    }
+
+    /* Timestamp */
+    .msg-time {
+        font-size: 10px;
+        color: #999;
+        margin-top: 4px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .chat-footer {
+        padding: 10px;
+        background: white;
+        border-top: 1px solid #eee;
+        display: flex;
+        gap: 10px;
+    }
+
+    #chat-input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        outline: none;
+    }
+
+    #send-btn {
+        background: var(--plaksha-teal);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* Grab required DOM elements */
+    const toggleBtn = document.getElementById('chatbot-toggler');
+    const closeBtn = document.getElementById('close-chat');
+    const chatWindow = document.getElementById('plaksha-chat-window');
+    const chatInput = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-btn');
+    const chatBody = document.getElementById('chat-body');
+
+    /* Open / close chat window */
+    function toggleChat() {
+        chatWindow.classList.toggle('show');
+        if (chatWindow.classList.contains('show')) {
+            chatInput.focus();
+        }
+    }
+
+    toggleBtn.addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', toggleChat);
+
+    /* Function to add messages to chat UI */
+    function addMessage(text, sender) {
+        const message = document.createElement('div');
+        message.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+
+        const content = document.createElement('div');
+        content.classList.add('msg-content');
+        content.innerText = text;
+
+        const time = document.createElement('div');
+        time.classList.add('msg-time');
+        time.innerText = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        message.appendChild(content);
+        message.appendChild(time);
+        chatBody.appendChild(message);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    /* Handle sending messages */
+    function handleSend() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        addMessage(text, 'user');
+        chatInput.value = '';
+
+        /* Simulated bot reply */
+        setTimeout(() => {
+            addMessage("I am just a frontend demo right now! Connect me to a backend to make me smart.", 'bot');
+        }, 1000);
+    }
+
+    sendBtn.addEventListener('click', handleSend);
+    chatInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') handleSend();
+    });
+
+});
+</script>
