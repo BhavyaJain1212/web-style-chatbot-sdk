@@ -1,0 +1,178 @@
+.searchBox {
+    display: flex;
+    max-width: 160px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: 40px;
+    background: #333;
+    border-radius: 50px;
+    position: relative;
+    border: 2px solid rgb(114, 114, 114);
+    transition: width 0.3s ease;
+}
+
+.cross {
+    background-color: white;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-top: 37px;
+}
+
+.crosshead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zindex {
+    z-index: 1;
+}
+
+.searchBox:hover {
+  border: 2px solid white;
+}
+
+.searchButton {
+    color: white;
+    position: absolute;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background: #5e5e5e;
+    border: 0;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#searchInput::placeholder {
+    color: #fff !important; /* Standard syntax */
+}
+
+#searchInput::-webkit-input-placeholder {
+    color: #fff !important; /* For Chrome, Safari, and newer Edge */
+}
+
+#searchInput::-moz-placeholder {
+    color: #fff !important; /* For Firefox */
+}
+
+#searchInput:-ms-input-placeholder {
+    color: #fff !important; /* For older IE and Edge */
+}
+
+#searchInput::-ms-input-placeholder {
+    color: #fff !important; /* For older IE */
+}
+
+.svg {
+    margin-left: 0px;
+    margin-right: 0 !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 18px;
+}
+
+.img {
+    object-fit: contain;
+    width: 150px;
+}
+
+.directions {
+    margin-top: 18px !important;
+    color: white;
+}
+
+.active-page {
+    background: var(--Primary-Color-Plaksha-AQUA, #00A0B4) !important;
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+
+    .hide
+    {
+        display: none;
+    }
+
+    .svg {
+        margin-left: -4px;
+    }
+
+    .searchBox {
+        width: 45px; /* Default width */
+        height: 45px;
+        margin-left: 23px;
+    }
+
+    .img {
+        width: 100% !important;
+    }
+
+    .searchBox.expanded {
+        width: 180px; /* Expanded width on tap */
+    }
+
+    .searchInput {
+            opacity: 1;
+            pointer-events: auto;
+    }
+
+    .bar{
+        font-size: 14px !important;
+    }
+
+    .directions {
+        margin-top: 15px;
+    }
+
+    #searchButton {
+        display: none; /* Initially hide the main button */
+    }
+
+    #onlyclick {
+        display: inline-block; /* Show the phone-specific button */
+    }
+
+    .searchBox.expanded #searchButton {
+        display: inline-block; /* Show the main button after expansion */
+    }
+
+    .searchBox.expanded #onlyclick {
+        display: none; /* Hide the phone button after expansion */
+    }
+
+}
+
+
+
+
+@media only screen and (min-width:1900px)
+{
+    .searchBox
+    {
+        transform: translateX(150px);
+    }
+}
+
+
+@media only screen and (min-width:601px) and (max-width:1200px)
+{
+    .searchBox
+    {
+        width:auto;
+    }
+}

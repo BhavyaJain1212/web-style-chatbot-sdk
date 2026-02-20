@@ -1,0 +1,135 @@
+
+.TeamDetailsGrid .Bio_Grid .Bio_MainWrap .BioInfo  > a ,
+.facultyTabPanesText > a ,.entry-main-content > a,
+.course-main-container .child-carousel .carousel .carousel-inner .carousel-item .child-carousel-mainDiv .child-carousel-comment .child-carousel-wrapper .child-carousel-text > a,
+.Work-container-main .Detail_page .main_content_section .content_prelude .content_prelude_summary .content_prelude_summary_text > a ,
+.course-main-container .ug-landing .content-wrapper .desc >p > a,
+.d-block > a,
+.course-main-container .child-carousel .carousel .carousel-inner .carousel-item .child-carousel-mainDiv .child-carousel-comment .child-carousel-wrapper .child-carousel-text >a ,
+.course-main-container .pillar-section .scrollable-container .item .content-wrapper .tile-details .content>a,
+.course-main-container .video-carouel .main-data .content-wrapper .sub-title >p>a,
+.Work-container-main .Detail_page .main_content_section .content_prelude .content_prelude_summary .content_prelude_summary_text >p>a,
+.eelsText2>p>a,
+.fdcTabText>p>a,
+.joinUsText >p>a,
+.homepage-main-container .cta-video .cta-video-container .cta-wrapper .sub-title>p>a,
+.Work-container-main .Detail_page .main_content_section .content_prelude .content_prelude_summary .content_prelude_summary_text ul>a,
+.schlorship-main .admission-info .info .list-wrapper .prerequisite-text>p>a,
+.schlorship-main .child-carousel .carousel .carousel-inner .carousel-item .child-carousel-mainDiv .child-carousel-comment .child-carousel-wrapper .child-carousel-text>p>a,
+.schlorship-main #faqs-accordian .section-main .accordion-content .accordion .card .card-body>p>a,
+.partners-main-container .cta-video .cta-video-container .cta-wrapper .sub-title>p>a>,.fdcTabText a
+.col-lg-12 >p>a,
+.ug-programs-main .ug-degrees-info .ug-degrees-summary
+{
+    color: #000 !important; 
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+}
+
+
+
+.schlorship-main .pillar-section .pillar-title .pillar-desc .content > p > a,
+.course-main-container .tabs-video .root-container .controller-wrapper .sub-title>a,
+.course-main-container .tabs-video .root-container .content-wrapper .content-data>a,
+.ug-programs-main .ug-programs-landing-page .second-line-content .ug-programs-summary p>a,
+.TeamWrapper .TW_HeadGrid .PlakshaTeam >p>a,
+.pvfpBannerContainer .banerDesc>p>a,
+.ongoeventDesc >a,
+.admission-container .undergraduate-admission .undergraduate-header > p>a,
+.schlorship-main .pillar-section .pillar-title .pillar-desc .content>p>a,
+.schlorship-main .pillar-section .pillar-title .pillar-desc .content>p>a,
+.course-main-container .ug-landing.yts .content-wrapper .desc>p>a,
+.course-main-container .child-carousel.yts .carousel .carousel-inner .carousel-item .child-carousel-mainDiv .child-carousel-comment .child-carousel-wrapper .child-carousel-text>p>a,
+.about_us_container .pillar-section .pillar-title .pillar-desc .content a
+,.about_us_container .canvas-text-action .carousel-inner .carousel-item .text-container .desc a,
+.course-main-container .child-carousel a,
+.Work-container-main .landing_page .content-container .main-description .main-description-text a,
+.text-banner a,
+.ug-programs-main .tabs-carousel-cta .side-list  a,.ug-programs-main .tabs-carousel-cta .side-list .side-list-summary a,.ug-programs-main .tabs-carousel-cta .side-list .side-list-points a,
+.ug-programs-main .tabs-carousel-cta .carousel-description a,
+.font-14  a,
+.block-content a,
+.col-sm-12 p>a,
+.desc p>a,
+.TeamWrapper .TW_HeadGrid .PlakshaTeam p a,
+.placements-main-container .placements-landing-page .carousel .carousel-item .placements-center-text .Description_Placements .Description_Placements_Text p  a
+.TeamWrapper .TW_HeadGrid .PlakshaTeam p >a,
+.admission-container .fees .content span>p>a,
+.admission-container .contact .contact-info .basic span>p>a,
+.text-white-section a 
+{
+
+text-decoration: underline !important;
+color: #fff !important;
+text-underline-position: under !important ;
+font-weight: 600 !important;
+background-color: transparent !important;
+text-decoration-color: #fff !important;
+}
+
+.ug-programs-main .ug-degrees-info .ug-degrees-summary > p>a,.course-main-container .recruiters-feedback #carousel-recruiters .carousel-inner .carousel-item .recruiters-mainDiv .recruiters-comment .recruiters-comment-wrapper .recruiters-comment-text p>a,
+.gallery-thumb-images a,
+.course-main-container .child-carousel .carousel .carousel-inner .carousel-item .child-carousel-mainDiv .child-carousel-comment .child-carousel-wrapper .child-carousel-text a,
+.homepage-main-container .blog-tiles .blog-tiles-container .heading .sub-title a,
+.desc p>a,
+.Work-container-main .Detail_page .main_content_section .content_prelude .content_prelude_summary >a,
+.schlorship-main .admission-info .info .list-wrapper .prerequisite-text p>span>a,
+.schlorship-main #faqs-accordian .section-main .accordion-content .accordion .card .card-body p>span>a,.sub-title a,
+.recruiters-comment-text a,
+.Work-container-main .Detail_page .main_content_section .content_contact_details .content_contact_details_heading .content_contact_details_text  a
+{
+   
+    color: #000 !important; 
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+   
+}
+
+.card-button-wrapper a.button
+{
+    text-decoration: none !important;
+}
+#collapse_academic_topic_0 .card-body >p>a,
+.admission-container .admission-info .info .list-wrapper:first-child  a,
+.Work-container-main .Detail_page .main_content_section .content_prelude .content_prelude_summary .content_prelude_summary_text a,
+.admission-container .financial-aid .content .desc a,
+.admission-container .financial-aid .content .content-footer a,
+.about_us_container .about_us_section .begining .desc a,
+.about_us_container .pillar-section .scrollable-container .tile-item .tile-details .content  a,
+.about_us_container .cta-video .cta-video-container .cta-wrapper .sub-title a,
+.about_us_container .cta-scroll-logos .cta-scroll-logos-container .cta-content .desc a
+,.p-line  a,
+.Work-container-main .Detail_page .main_content_section .content_pointers a,
+.about_us_container .pillar-section .scrollable-container .tile-item .tile-details .content a,
+.events-dsw ul li p a,
+.placements-main-container .alumni-panel .alumni-panel-summary .alumni-panel-summary-text a,
+.placements-main-container .roles-div .description-list-panel .description-list-panel-pointers a,
+.eelsDesc p>a,
+.howwedoitDesc p>a,
+.client-single.active .client-comment p>a,
+.course-main-container .pillar-section .scrollable-container .item .content-wrapper .tile-details .content a,
+    .reachus_main_wrap .Reach_Last_Area .Support_Text .S_Text p>a,
+    .card-text a
+    ,    .ug-programs-main .ug-degrees-info .ug-degrees-summary p>a,
+    .ug-programs-main .timeline .timeline-title .desc p>a
+{
+    color: #000 !important; 
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+}
+
+
+.faq-main-content .cards-container-main .f_view #faq_head .text-description  >a,
+.placements-main-container .opportunities-main .opportunities-right-panel .person-comment-holder .person-comment a,
+.whatwedoText p>a,
+.schlorship-main .pillar-section .pillar-title .pillar-desc .content>p>a
+.schlorship-main .pillar-section .pillar-title .pillar-desc .content>p>a>u
+{
+    text-decoration: underline !important;
+    color: #fff !important;
+    text-underline-position: under !important ;
+    font-weight: 600 !important;
+    background-color: transparent !important;
+    text-decoration-color: #fff !important;
+
+}

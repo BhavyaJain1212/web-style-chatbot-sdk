@@ -1,0 +1,46 @@
+.chatwithus-btn {
+  position: fixed;
+  right: -1px;
+  top: 52%;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  background: #25D366;
+  border-radius: 5px 5px 0 0;
+  color: #FFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.33333rem 0.66667rem;
+  z-index: 1000;
+}
+  
+.chat-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  font-feature-settings: 'liga' off, 'clig' off;
+  text-align: center;
+}
+  
+.chatwithus-btn:hover,
+.chatwithus-btn:focus,
+.chatwithus-btn:active {
+  color: #FFF;
+  text-decoration: none;
+  background: #25D366;
+  outline: none;
+}
+@media screen and (max-width:1200px){
+  .chat-text {
+    font-size: 14px;
+  }
+  .chatwithus-btn {
+    padding: 5px;
+    top: 55%;
+  }
+}
+  

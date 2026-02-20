@@ -1,0 +1,87 @@
+
+
+/* SCREEN SIZES FOR ALL LAPTOP OUR STUDENT ALIGMENT ACCORDING TO HOME PAGE  */
+@media screen and (width:1280px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 6.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 6.19167rem;
+}
+}
+@media screen and (width:1366px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 9.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 9.19167rem;
+}
+}
+@media screen and (width:1440px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 11.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 11.19167rem;
+}
+}
+@media screen and (width:1536px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 14.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 14.19167rem;
+}
+}
+@media screen and (width:1600px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 15.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 15.19167rem;
+}
+}
+
+
+@media screen and (width:1920px)
+{
+  .placements-main-container .alumni-panel .alumni-panel-heading {
+    padding: 0 0 0.9375rem 21.19167rem;
+}
+
+.placements-main-container .alumni-panel .alumni-panel-summary {
+    width: 44.27083rem;
+    padding: 0 0 2.1875rem 21.19167rem;
+}
+}
+
+
+
+/* END */
+
+/* Mobile view responsive our studnt  */
+@media screen and (min-width:400px) and (max-width:600px)
+{
+  .front
+  {
+    width: 90% !important;
+  }
+}
+
+
+/* Ends  */

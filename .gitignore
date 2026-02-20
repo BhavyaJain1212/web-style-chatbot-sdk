@@ -57,7 +57,7 @@ logs/
 *.log.*
 
 # Downloaded website files
-downloaded_*/
+#downloaded_*/
 
 # Testing
 .pytest_cache/
